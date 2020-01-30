@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const init = require("./routes/init");
+const book = require("./routes/book");
 
 const { PORT = 3000 } = process.env;
 const app = express();
@@ -13,5 +14,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/init", init);
+app.use("/book", book);
 
 app.listen(PORT);
