@@ -1,6 +1,6 @@
-const {book} = require("../constrollers/book");
+const {postBook} = require("../constrollers/book");
 router = require("express").Router();
 
-router.post("", book);
+router.post("", postBook);
 
 module.exports = router;
